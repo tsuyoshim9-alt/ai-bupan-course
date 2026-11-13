@@ -1,0 +1,78 @@
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #5b6370;
+  --line: #e6e2da;
+  --accent: #1d4e89;
+  --accent-soft: #eaf1f9;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+}
+a { color: var(--accent); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+header.site {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap;
+}
+header.site .logo { font-weight: 700; color: var(--text); text-decoration: none; font-size: 17px; }
+header.site nav a { margin-left: 16px; font-size: 14px; text-decoration: none; }
+
+.hero { padding: 64px 0 48px; }
+.hero .eyebrow { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: .08em; }
+.hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.4; margin: 8px 0 16px; text-wrap: balance; }
+.hero p { color: var(--muted); max-width: 640px; margin: 0; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 22px; margin: 0 0 20px; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; padding: 20px;
+}
+.card h3 { margin: 0 0 8px; font-size: 17px; }
+.card p, .card ul { margin: 0; color: var(--muted); font-size: 15px; }
+.card ul { padding-left: 1.2em; }
+
+.plan .price { font-size: 28px; font-weight: 700; color: var(--text); margin: 4px 0; }
+.plan .price small { font-size: 14px; font-weight: 400; color: var(--muted); }
+.plan.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+ol.flow { padding-left: 1.4em; margin: 0; }
+ol.flow li { margin-bottom: 8px; }
+
+.note {
+  background: var(--accent-soft); border-radius: 8px;
+  padding: 14px 16px; font-size: 14px; color: var(--muted); margin-top: 20px;
+}
+
+table.law { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 15px; }
+table.law th, table.law td {
+  border: 1px solid var(--line); padding: 12px 14px; vertical-align: top; text-align: left;
+}
+table.law th { width: 30%; background: #f4f1ea; font-weight: 700; }
+@media (max-width: 600px) {
+  table.law th, table.law td { display: block; width: 100%; }
+  table.law th { border-bottom: none; }
+}
+
+.doc h1 { font-size: 26px; margin: 48px 0 24px; }
+.doc h2 { font-size: 18px; margin: 28px 0 8px; }
+.doc p, .doc li { font-size: 15px; }
+
+footer.site { border-top: 1px solid var(--line); padding: 28px 0 40px; margin-top: 40px; font-size: 13px; color: var(--muted); }
+footer.site a { margin-right: 16px; }
